@@ -1,0 +1,525 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://MicRecord.gd" type="Script" id=1]
+[ext_resource path="res://mostraspectro.gd" type="Script" id=3]
+[ext_resource path="res://DialogoSalvar.gd" type="Script" id=4]
+[ext_resource path="res://assets/fontes/Rubik-Regular.tres" type="DynamicFontData" id=5]
+[ext_resource path="res://VSlider_VM.gd" type="Script" id=6]
+[ext_resource path="res://VSlider_VG.gd" type="Script" id=7]
+[ext_resource path="res://VSlider_EQG.gd" type="Script" id=8]
+[ext_resource path="res://assets/microphone-icon.png" type="Texture" id=9]
+[ext_resource path="res://Botao_Analisar.gd" type="Script" id=10]
+[ext_resource path="res://new_styleboxflat.tres" type="StyleBox" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=5]
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0627451, 0.752941, 0.137255, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="AudioStreamMicrophone" id=8]
+
+[sub_resource type="AudioStreamSample" id=9]
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=13]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFontData" id=29]
+font_path = "res://assets/fontes/Rubik-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=30]
+use_filter = true
+font_data = SubResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.662745, 0.662745, 0.662745, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.662745, 0.662745, 0.662745, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=22]
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=24]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=26]
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.0156863, 0.0431373, 0.356863, 1 )
+border_width_top = 13
+border_width_right = 1
+border_width_bottom = 4
+corner_detail = 5
+
+[sub_resource type="DynamicFont" id=28]
+outline_size = 1
+outline_color = Color( 0.529412, 0.529412, 0.529412, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="MicRecord" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.492
+margin_top = -230.01
+margin_right = 319.508
+margin_bottom = -43.0101
+rect_pivot_offset = Vector2( 326.627, 84.6642 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 2.49481
+margin_top = -282.488
+margin_right = 642.495
+margin_bottom = 738.512
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect_Fundo" type="ColorRect" parent="TextureRect"]
+anchor_left = -0.00165548
+anchor_right = -0.00165548
+margin_left = -0.940493
+margin_right = 637.06
+margin_bottom = 1016.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect_VU" type="ColorRect" parent="TextureRect"]
+margin_left = 152.918
+margin_top = 73.0
+margin_right = 503.918
+margin_bottom = 286.0
+hint_tooltip = "Visualizador de Especrto"
+size_flags_horizontal = 2
+size_flags_vertical = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Botao_Analisar" type="Button" parent="TextureRect"]
+anchor_right = 0.019
+anchor_bottom = 0.02
+margin_left = 284.556
+margin_top = 539.537
+margin_right = 452.396
+margin_bottom = 585.117
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_disabled = Color( 0.172549, 0.172549, 0.172549, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Analizar"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect"]
+anchor_right = 0.006
+margin_left = 129.98
+margin_top = 26.1827
+margin_right = 543.14
+margin_bottom = 61.1827
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+max_value = 1000.0
+step = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 8 )
+autoplay = true
+bus = "Record"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = "Record"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 9 )
+volume_db = -6.0
+
+[node name="RecordButton" type="Button" parent="."]
+margin_left = 52.6523
+margin_top = 28.0616
+margin_right = 232.652
+margin_bottom = 96.0616
+hint_tooltip = "Grava o Audio do Microfone do Dispositivo"
+mouse_filter = 1
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+shortcut_in_tooltip = false
+text = "Gravar"
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 56.0832
+margin_top = 144.918
+margin_right = 236.083
+margin_bottom = 212.918
+custom_styles/hover = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+custom_fonts/font = SubResource( 30 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Salvar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Filename" type="LineEdit" parent="SaveButton"]
+visible = false
+margin_left = 237.0
+margin_top = -5.0
+margin_right = 425.0
+margin_bottom = 69.0
+text = "user://licao_11.wav"
+placeholder_alpha = 0.57
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 280.172
+margin_top = 148.165
+margin_right = 470.172
+margin_bottom = 215.165
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color_disabled = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+disabled = true
+text = "Reproduzir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayMusic" type="Button" parent="."]
+margin_left = 56.579
+margin_top = 258.308
+margin_right = 236.579
+margin_bottom = 325.308
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Testar Som"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status" type="Label" parent="."]
+margin_left = 138.899
+margin_top = 495.218
+margin_right = 538.899
+margin_bottom = 509.218
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="VSlider_VM" type="HSlider" parent="."]
+anchor_right = 0.025
+anchor_bottom = 0.086
+margin_left = 204.357
+margin_top = 405.393
+margin_right = 450.357
+margin_bottom = 428.311
+custom_styles/slider = SubResource( 27 )
+min_value = -6.0
+max_value = 76.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSlider_VM"]
+margin_left = 66.7758
+margin_top = -9.60364
+margin_right = 177.776
+margin_bottom = 9.39636
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volume Master"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider_VG" type="HSlider" parent="."]
+anchor_right = 0.025
+anchor_bottom = 0.086
+margin_left = 204.357
+margin_top = 449.503
+margin_right = 450.357
+margin_bottom = 472.421
+min_value = -6.0
+max_value = 76.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSlider_VG"]
+margin_left = 66.7758
+margin_top = -8.18945
+margin_right = 201.776
+margin_bottom = 10.8105
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volume Microfone"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider_EQG" type="HSlider" parent="."]
+anchor_right = 0.025
+anchor_bottom = 0.086
+margin_left = 204.357
+margin_top = 495.218
+margin_right = 450.357
+margin_bottom = 518.136
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSlider_EQG"]
+margin_left = 66.7758
+margin_top = -8.18945
+margin_right = 201.776
+margin_bottom = 10.8105
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volume Graves"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider_EQM" type="HSlider" parent="."]
+anchor_right = 0.025
+anchor_bottom = 0.086
+margin_left = 204.357
+margin_top = 538.989
+margin_right = 450.357
+margin_bottom = 561.907
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSlider_EQM"]
+margin_left = 66.7758
+margin_top = -8.18945
+margin_right = 201.776
+margin_bottom = 10.8105
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volume Médios"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider_EQA" type="HSlider" parent="."]
+anchor_right = 0.025
+anchor_bottom = 0.086
+margin_left = 204.357
+margin_top = 579.994
+margin_right = 450.357
+margin_bottom = 602.912
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSlider_EQA"]
+margin_left = 66.7758
+margin_top = -8.18945
+margin_right = 201.776
+margin_bottom = 10.8105
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Volume Agudos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogoCarregar" type="FileDialog" parent="."]
+margin_right = 600.0
+margin_bottom = 500.0
+size_flags_horizontal = 7
+popup_exclusive = true
+window_title = "Abrir um Arquivo"
+dialog_hide_on_ok = true
+mode = 0
+access = 2
+current_dir = "/Users/eu-so/Downloads/PRESSTART/gravador de audio"
+current_path = "/Users/eu-so/Downloads/PRESSTART/gravador de audio/"
+script = ExtResource( 4 )
+
+[node name="DialogoSalvar" type="FileDialog" parent="."]
+margin_right = 325.0
+margin_bottom = 130.0
+popup_exclusive = true
+window_title = "Salvar um Arquivo"
+resizable = true
+dialog_hide_on_ok = true
+filters = PoolStringArray( ".wav", ".ogg" )
+current_dir = "res://gravacoes"
+current_file = "som.wav"
+current_path = "res://gravacoes/som.wav"
+[connection signal="pressed" from="RecordButton" to="." method="_on_RecordButton_pressed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="PlayMusic" to="." method="_on_Play_Music_pressed"]
+[connection signal="value_changed" from="VSlider_VM" to="VSlider_VM" method="_on_VSlider_VM_value_changed"]
+[connection signal="value_changed" from="VSlider_VG" to="VSlider_VG" method="_on_VSlider_VG_value_changed"]
+[connection signal="value_changed" from="VSlider_EQG" to="VSlider_EQG" method="_on_VSlider_EQG_value_changed"]
+[connection signal="file_selected" from="DialogoCarregar" to="." method="_on_DialogoCarregar_file_selected"]
+[connection signal="confirmed" from="DialogoSalvar" to="." method="_on_DialogoSalvar_confirmed"]
